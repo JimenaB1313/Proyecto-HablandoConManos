@@ -1,0 +1,24 @@
+import { Create, NumberInput, ReferenceInput, required, SimpleForm, TextInput } from "react-admin";
+
+export const LeccionCreate = () => {
+    return (
+        <Create>
+            <SimpleForm>
+                <TextInput
+                    source="title"
+                    validate={[required()]}
+                    label="Title"
+                />
+                <ReferenceInput
+                    source="unidadId"
+                    reference="unidades"
+                />
+                <NumberInput
+                    source="order"
+                    validate={[required()]}
+                    label="Orden"
+                />
+            </SimpleForm>
+        </Create>
+    );
+};
