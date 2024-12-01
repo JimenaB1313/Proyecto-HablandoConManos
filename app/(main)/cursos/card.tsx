@@ -34,7 +34,7 @@ export const Card = ({
                 className="rounded-lg drop-shadow-md object-cover"
             />
             <p className="text-neutral-700 text-center font-bold mt-3 txt-xl">
-                ¡Empieza el curso ya!
+                {title}
             </p>
         </div>
     );

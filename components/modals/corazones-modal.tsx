@@ -33,7 +33,7 @@ export const CorazonesModal = () => {
                 <DialogHeader>
                     <div className="flex items-center w-full justify-center mb-5">
                         <Image
-                            src="/l2.png"
+                            src="/logoverdeoscuro.png"
                             alt="Mascota"
                             height={80}
                             width={80}

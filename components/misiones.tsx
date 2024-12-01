@@ -35,7 +35,7 @@ export const Misiones = ({ puntos }: Props) => {
                             key={mision.title}
                         >
                             <Image
-                                src="/l2.png"
+                                src="/points.svg"
                                 alt="Puntos"
                                 width={40}
                                 height={40}

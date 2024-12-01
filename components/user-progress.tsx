@@ -17,7 +17,7 @@ export const UserProgress = ({ activeCourse, puntos, corazones }: Props) => {
                     <Image
                         src={activeCourse.imageSrc}
                         alt={activeCourse.title}
-                        className="rounded-md border"
+                        className="rounded-md"
                         width={32}
                         height={32}
                     />
@@ -25,7 +25,7 @@ export const UserProgress = ({ activeCourse, puntos, corazones }: Props) => {
             </Link>
             <Button variant="ghost" className="text-orange-500">
                     <Image
-                        src="/j1.png"
+                        src="/points.svg"
                         alt="Puntos"
                         width={28}
                         height={28}
@@ -35,7 +35,7 @@ export const UserProgress = ({ activeCourse, puntos, corazones }: Props) => {
             </Button>
             <Button variant="ghost" className="text-rose-500">
                     <Image
-                        src="/l2.png"
+                        src="/heart.svg"
                         alt="Corazones"
                         width={22}
                         height={22}

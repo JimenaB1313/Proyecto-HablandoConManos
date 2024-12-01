@@ -16,7 +16,7 @@ export const Header = () => {
             <div className="lg:max-w-screen-lg mx-auto flex items-center justify-between h-full">
                 <div className="pt-8 pl-4 pb-7 flex items-center gap-x-3">
                     <Image src="/logoverdeoscuro.png" height={40} width={40} alt="Logo"/>
-                    <h1 className="text-2xl font-extrabold text-green-600 tracking-wide">
+                    <h1 className="text-2xl font-extrabold text-[#606c38] tracking-wide">
                         Hablando con las manos
                     </h1>
                 </div>
