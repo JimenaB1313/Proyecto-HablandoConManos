@@ -49,7 +49,7 @@ export const LeccionButton = ({
 
     const Icon = isCompleted ? Check : isLast ? Crown : Star;
 
-    const href = isCompleted ? '/leccion/${id}' : "/leccion";
+    const href = isCompleted ? '/leccion/2' : "/leccion";
 
     return (
         <Link

@@ -18,7 +18,7 @@ const LeccionPage = async () => {
         redirect("/aprender");
     }
 
-    const porcentajeInicial = leccion.ejercicios
+    const InicialPorcentaje = leccion.ejercicios
         .filter((ejercicio) => ejercicio.completado)
         .length / leccion.ejercicios.length * 100;
 
@@ -27,7 +27,7 @@ const LeccionPage = async () => {
             inicialLeccionId={leccion.id}
             inicialLeccionEjercicios={leccion.ejercicios}
             inicialCorazones={progresoUsuario.corazones}
-            inicialPorcentaje={porcentajeInicial}
+            inicialPorcentaje={InicialPorcentaje}
         />
     );
 };

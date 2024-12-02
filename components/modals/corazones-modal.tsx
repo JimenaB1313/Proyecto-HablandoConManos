@@ -43,7 +43,7 @@ export const CorazonesModal = () => {
                         ¡Te quedaste sin corazones!
                     </DialogTitle>
                     <DialogDescription>
-                        Practica en lecciones anteriores o espera a que tus corazones se recuperen.
+                        Practica en lecciones anteriores para recuperar corazones.
                     </DialogDescription>
                 </DialogHeader>
                 <DialogFooter className="mb-4">

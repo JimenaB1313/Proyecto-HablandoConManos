@@ -31,7 +31,6 @@ export const Ejercicio = ({
                     id={opcion.id}
                     text={opcion.text}
                     imageSrc={opcion.imageSrc}
-                    shortcut={'${i + 1}'}
                     selected={selectedOption === opcion.id}
                     onClick={() => onSelect(opcion.id)}
                     status={status}

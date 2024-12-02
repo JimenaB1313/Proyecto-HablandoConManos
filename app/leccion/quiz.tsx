@@ -10,7 +10,7 @@ import { Footer } from "./footer";
 import { Ejercicio } from "./ejercicio";
 import { useRouter } from "next/navigation";
 import { QuestionBubble } from "./question-bubble";
-import { useAudio, useWindowSize, useMount } from "react-use";
+import { useWindowSize, useMount } from "react-use";
 
 import { ResultadoCard } from "./resultado-card";
 import { ejercicios, ejercicioOpciones } from "@/db/schema";
@@ -48,17 +48,6 @@ export const Quiz = ({
 
     const router = useRouter();
 
-    const [finalAudio] = useAudio({ src: "/finish.mp3", autoPlay: true});
-    const [
-        audioCorrecto,
-        _c,
-        controlesCorrectos,
-    ] = useAudio({ src: "/correct.wav" });
-    const [
-        audioIncorrecto,
-        _i,
-        controlesIncorrectos,
-    ] = useAudio({ src: "/incorrect.wav" });
     const [pendiente, startTransition] = useTransition();
 
     const [leccionId] = useState(inicialLeccionId);
@@ -119,7 +108,6 @@ export const Quiz = ({
                             return;
                         }
 
-                        controlesCorrectos.play();
                         setStatus("correcto");
                         setPorcentaje((prev) => prev + 100 / ejercicios.length);
 
@@ -139,7 +127,6 @@ export const Quiz = ({
                             return;
                         }
 
-                        controlesIncorrectos.play();
                         setStatus("incorrecto");
 
                         if (!response?.error) {
@@ -154,7 +141,6 @@ export const Quiz = ({
     if (!ejercicio) {
         return (
             <>
-                {finalAudio}
                 <Confetti
                     width={width}
                     height={height}
@@ -206,8 +192,6 @@ export const Quiz = ({
 
     return (
         <>
-            {audioCorrecto}
-            {audioIncorrecto}
             <Header
             corazones={corazones}
             porcentaje={porcentaje}

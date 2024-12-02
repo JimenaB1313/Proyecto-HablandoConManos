@@ -8,7 +8,6 @@ type Props = {
     id: number;
     imageSrc: string | null;
     text: string;
-    shortcut: string;
     selected?: boolean;
     onClick: () => void;
     disabled?: boolean;
@@ -20,7 +19,6 @@ export const Card = ({
     id,
     imageSrc,
     text,
-    shortcut,
     selected,
     onClick,
     disabled,
@@ -59,16 +57,6 @@ export const Card = ({
                 tipo === "ASSIST" && "flex-row-reverse",
             )}>
                 {tipo === "ASSIST" && <div />}
-                <div className={cn(
-                    "lg:w-[30px] lg:h-[30px] w-[20px] h-[20px] border-2 flex items-center justify-center rounded-lg text-neutral-400 lg:text-[15px] text-xs font-semibold",
-                    selected && "border-sky-500 text-sky-500",
-                    selected && status === "correcto"
-                        && "border-gree-500 text-green-500",
-                    selected && status === "incorrecto"
-                        && "border-rose-500 text-rose-500",
-                )}>
-                    {shortcut}
-                </div>
             </div>
         </div>
     );
